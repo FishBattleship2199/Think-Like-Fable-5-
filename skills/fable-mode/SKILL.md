@@ -80,6 +80,15 @@ Cheaper models fail most often by (a) hallucinating APIs, (b) losing track of mu
 - Reversible + follows from the request → just do it. Irreversible or outward-facing (deploys, emails, deletes, pushes) → confirm first.
 - If you've tried the same fix twice and it hasn't worked, stop repeating. Zoom out: re-derive the problem from first principles, question an assumption, or read more context. The third identical attempt never works.
 
+## 9. Use tools like a professional
+
+- **Batch independent calls.** If two tool calls don't depend on each other's results (read two files, edit + copy, two searches), issue them in ONE message so they run in parallel. Only sequence calls when one genuinely needs the other's output.
+- **Use the dedicated tool, not a shell workaround.** Read/Edit/Grep/Glob over `cat`/`sed`/`grep`-in-Bash. Bash is for actual shell work: git, package managers, running the program. Doing file edits through `sed` one-liners is how you corrupt files.
+- **Protect your context window — it's a budget.** Read only the file region you need, not whole files. For broad questions ("where is X handled across the codebase?"), delegate to a search subagent and keep only its conclusion instead of dumping twenty files into your own context. Put intermediate/temp files in the scratchpad, not the project.
+- **Read the error before acting on it.** On any failure, extract what the message *actually says* — the answer is often printed right there (a warning, a path, a line number). Never retry a failed command verbatim hoping for different results; change something based on what you read.
+- **Don't block on waiting.** Long builds, CDN propagation, CI runs → background the wait (run_in_background, a monitor, an until-loop) and keep working or end the turn cleanly. Never spin in foreground retry loops.
+- **Verify with the cheapest sufficient probe.** One targeted command that exercises the change beats a full test suite when the change is small — and beats reasoning about the code when running it takes two seconds.
+
 ## Quick self-check before your final message
 
 1. Did I match my effort and response length to the size of the problem?

@@ -70,6 +70,15 @@ Escalate freely, de-escalate carefully: if a "trivial" task surprises you, promo
 - Reversible + follows from the request → just do it. Irreversible or outward-facing → confirm first.
 - If you've tried the same fix twice and it hasn't worked, stop repeating. Zoom out and re-derive the problem from first principles.
 
+## 9. Use tools like a professional
+
+- **Batch independent calls.** If two tool calls don't depend on each other's results, issue them together so they run in parallel. Only sequence calls when one genuinely needs the other's output.
+- **Use the dedicated tool, not a shell workaround.** If your harness has file-read/edit/search tools, use them over `cat`/`sed`/`grep` one-liners. The shell is for actual shell work: git, package managers, running the program. Editing files through `sed` is how you corrupt them.
+- **Protect your context window — it's a budget.** Read only the file region you need, not whole files. For broad codebase-wide questions, use a subagent or targeted search and keep only the conclusion. Put temp files in a scratch directory, not the project.
+- **Read the error before acting on it.** On any failure, extract what the message *actually says* — the answer is often printed right there. Never retry a failed command verbatim hoping for different results; change something based on what you read.
+- **Don't block on waiting.** Long builds, CI runs, propagation delays → background the wait if your harness supports it, or check back later. Never spin in foreground retry loops.
+- **Verify with the cheapest sufficient probe.** One targeted command that exercises the change beats a full test suite when the change is small — and beats reasoning about the code when running it takes two seconds.
+
 ## Self-check before your final message
 
 0. Did I match my effort and response length to the size of the problem?

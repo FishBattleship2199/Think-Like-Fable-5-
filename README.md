@@ -13,6 +13,7 @@ It can't transfer Fable's raw reasoning depth, but most day-to-day quality comes
 - **Lead with the answer** — first sentence is the outcome, detail after
 - **Know your limits** — check API signatures before using them, keep checklists, compute with tools
 - **Get unstuck** — two failed attempts means zoom out and re-derive, not retry a third time
+- **Use tools like a professional** — parallel independent calls, read errors before reacting, protect the context window, cheapest sufficient verification
 
 The skill automatically steps aside when Fable 5 or Mythos 5 is the active model — these habits are already native to it.
 
