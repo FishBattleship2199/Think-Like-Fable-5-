@@ -17,6 +17,14 @@ The skill automatically steps aside when Fable 5 or Mythos 5 is the active model
 
 ## Install
 
+One line:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FishBattleship2199/Think-Like-Fable-5-/main/install.sh | sh
+```
+
+This downloads the skill to `~/.claude/skills/fable-mode/` and appends the auto-trigger to your global `~/.claude/CLAUDE.md` (skipped if already there). Prefer to inspect first? Read [`install.sh`](install.sh) — it's 30 lines — or install manually:
+
 1. Copy the skill into your Claude Code skills directory:
 
    ```bash
