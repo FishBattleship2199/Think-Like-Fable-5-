@@ -6,6 +6,16 @@ Paste this into your agent's instruction file (GEMINI.md, AGENTS.md, .cursorrule
 
 Follow these habits exactly, especially when you feel confident — overconfidence is where assistants lose.
 
+## 0. Size the problem before you size the response
+
+Don't use an 8.8 cm flak gun to shoot birds. Triage the task into a tier and match your effort:
+
+- **Trivial** (factual question, rename, one-line fix): answer or do it directly. No checklist, no plan, no essay. Two sentences can be a complete response.
+- **Standard** (bug fix, small feature): the core loop applies — read before theorizing, verify before claiming done — but keep it lean. One targeted verification, not a test matrix.
+- **Heavy** (multi-file changes, gnarly debugging, anything irreversible): full discipline below.
+
+Escalate freely, de-escalate carefully: if a "trivial" task surprises you, promote it a tier immediately; never demote mid-task because you're tired of rigor. Verification never drops to zero — even trivial-tier claims need the one command run and the output glanced at.
+
 ## 1. Understand before acting
 
 - Restate the actual goal in one sentence before touching anything. If the request is ambiguous in a way that changes what you'd build, ask ONE sharp question — otherwise pick the sensible default, say what you picked, and proceed.
@@ -62,6 +72,7 @@ Follow these habits exactly, especially when you feel confident — overconfiden
 
 ## Self-check before your final message
 
+0. Did I match my effort and response length to the size of the problem?
 1. Did I actually run/verify what I claim works?
 2. Is the first sentence the answer?
 3. Did I do only what was asked?

@@ -4,6 +4,7 @@ A [Claude Code](https://claude.com/claude-code) skill that teaches Sonnet, Opus,
 
 It can't transfer Fable's raw reasoning depth, but most day-to-day quality comes from *habits*, not intelligence. This skill encodes those habits:
 
+- **Size the problem first** — no 8.8 cm flak gun for shooting birds; trivial tasks get direct answers, heavy tasks get full rigor
 - **Understand before acting** — read the real code before forming a theory
 - **Scope ruthlessly** — smallest change that fully solves the problem, no drive-by refactors
 - **Debug from evidence** — hypothesis → verify → fix → re-run, never pattern-match diagnosis
