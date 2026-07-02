@@ -45,10 +45,19 @@ This downloads the skill to `~/.claude/skills/fable-mode/` and appends the auto-
 
 ## Using it outside Claude Code
 
-The skill mechanism is Claude Code-only, but the advice is model-agnostic. [`SYSTEM_PROMPT.md`](SYSTEM_PROMPT.md) is a generic version with the Claude-specific parts removed — paste it into:
+The skill mechanism is Claude Code-only, but the advice is model-agnostic.
+
+**Codex CLI** — one line:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FishBattleship2199/Think-Like-Fable-5-/main/install-codex.sh | sh
+```
+
+This appends the discipline to `~/.codex/AGENTS.md` between `<!-- fable-mode -->` markers (idempotent; delete the block to uninstall).
+
+For other tools, [`SYSTEM_PROMPT.md`](SYSTEM_PROMPT.md) is a generic version with the Claude-specific parts removed — paste it into:
 
 - **Gemini CLI** → `GEMINI.md`
-- **Codex CLI** → `AGENTS.md`
 - **Cursor** → Rules / `.cursorrules`
 - **Ollama / local models** → system prompt or Modelfile `SYSTEM` block
 
